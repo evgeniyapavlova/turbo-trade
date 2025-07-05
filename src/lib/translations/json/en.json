@@ -1,0 +1,55 @@
+{
+    "buttons": {
+        "tradeNow": "Trade now"
+    },
+    "header": {
+        "about": "About",
+        "howToStart": "How to start",
+        "reviews": "Reviews",
+        "logIn": "Log in"
+    },
+    "intro": {
+        "h1": "UNLEASH THE <span>LEVERAGE</span>",
+        "h2": "Your Gateway to Explosive Crypto Profits",
+        "caption": "Turn your $100 into $10,000 with our industry-leading leverage. Start dominating the market TODAY!"
+    },
+    "counter": {
+        "title": "If I had invested",
+        "periods": {
+            "m1": "1 month ago",
+            "m2": "1 months ago",
+            "y1": "1 year ago"
+        },
+        "result": "I would now have"
+    },
+    "crush": {
+        "title": "CRUSH THE COMPETITION",
+        "caption": "Turbo.Trade offers 15x more powerful leverage than standard platforms!"
+    },
+    "features": {
+        "list": [
+            {
+                "title": "Lite Interface",
+                "caption": "Just choose a direction, set your investment amount and leverage."
+            },
+            {
+                "title": "Simple Signals",
+                "caption": "Let AI help you make better trading decisions"
+            },
+            {
+                "title": "Isolated Margin",
+                "caption": "Limit your risk to the trade amount — your full balance stays safe"
+            },
+            {
+                "title": "Faster Than the Rest",
+                "caption": "No unnecessary features, just what you need"
+            }
+        ],
+        "devices": {
+            "title": "Available on any device",
+            "caption": "Trade anywhere — from web, desktop, or mobile",
+            "instantAccess": "Instant access",
+            "emailOnly": "Email only — no KYC"
+        }
+    }
+}

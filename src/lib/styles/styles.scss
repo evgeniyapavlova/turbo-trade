@@ -1,0 +1,67 @@
+@use 'variables.scss';
+@use 'buttons.scss';
+@use 'typography.scss';
+@use 'fonts.scss';
+@use '_constants' as var;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	overscroll-behavior-y: none;
+}
+
+body {
+	min-width: 320px;
+	font-family: var(--main-font);
+	font-size: 18px;
+	line-height: normal;
+	font-weight: 400;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	height: 100%;
+	min-height: 100vh;
+	background-color: var(--bgr);
+	color: #fff;
+}
+
+ul {
+	list-style: none;
+}
+
+.app {
+	overflow-x: hidden;
+}
+
+.content {
+	width: 100%;
+	max-width: 1448px;
+	padding: 0 24px;
+	margin: 0 auto;
+
+	@media screen and (max-width: 600px) {
+		padding: 0 20px;
+	}
+}
+
+.gradient-wrap {
+	width: 100%;
+	background-image: url(/images/intro-bgr.svg);
+	background-position: left bottom;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	padding-bottom: 60px;
+
+	@media screen and (max-width: 600px) {
+		background:
+			radial-gradient(159.73% 99.99% at 50% 99.99%, #bef428 0%, #0d5 100%),
+			linear-gradient(180deg, #fecb3a 0%, #fdd745 99.99%),
+			linear-gradient(90deg, #2bff93 0%, #c9ff31 100%), #d9d9d9;
+		border-radius: 0 0 26px 26px;
+		padding-bottom: 24px;
+	}
+}
