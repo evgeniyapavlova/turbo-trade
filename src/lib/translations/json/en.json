@@ -68,5 +68,10 @@
                 "caption": "Get in cheap, get out rich"
             }
         ]
+    },
+    "trade": {
+        "title": "Trade the Most Popular Crypto Futures",
+        "top3": "Top 3 traders",
+        "caption": "{{amountTraders}} traders earned ${{amountMoney}} on {{asset}} today with TurboTrade"
     }
 }
