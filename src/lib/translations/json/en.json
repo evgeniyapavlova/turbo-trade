@@ -51,5 +51,22 @@
             "instantAccess": "Instant access",
             "emailOnly": "Email only — no KYC"
         }
+    },
+    "steps": {
+        "title": "READY TO MAKE MONEY IN 60 SECONDS OR LESS?<span>Just 3 Simple Steps!</span>",
+        "list": [
+            {
+                "title": "Quick registration",
+                "caption": "Email only — no KYC"
+            },
+            {
+                "title": "Fund your account",
+                "caption": "Start trading with just $1"
+            },
+            {
+                "title": "Trade and Earn",
+                "caption": "Get in cheap, get out rich"
+            }
+        ]
     }
 }
