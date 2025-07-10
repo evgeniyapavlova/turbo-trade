@@ -40,6 +40,24 @@ h1 {
 	}
 }
 
+.title-2-main {
+	color: white;
+	font-size: 48px;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+
+	span {
+		color: var(--Green-Turbo);
+		display: block;
+		text-transform: none;
+	}
+
+	@media screen and (max-width: 800px) {
+		font-size: 32px;
+	}
+}
+
 .title-3 {
 	color: #fff;
 	font-size: 26px;

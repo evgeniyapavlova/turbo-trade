@@ -21,7 +21,7 @@ export const assets = [
 	{ name: 'Cosmos', logo: '/storage/public/5d/03/7304a7fed1a7h5e6d6.svg' }
 ];
 
-export function getRandomNames(namesArray: string[], count = 3) {
+export function getRandomNames(namesArray: string[] = names, count = 3) {
 	const shuffled = [...namesArray].sort(() => Math.random() - 0.5);
 	return shuffled.slice(0, count);
 }
@@ -54,3 +54,18 @@ export const randomNames = getRandomNames(names);
 export function getRandomProfit(min: number, max: number): string {
 	return (Math.floor(Math.random() * (max - min + 1)) + min).toLocaleString('en-US');
 }
+
+// export const countries = [
+// 	'Australia',
+// 	'Brazil',
+// 	'India',
+// 	'Mexico',
+// 	'Colombia',
+// 	'Chile',
+// 	'Costa Rica'
+// ];
+
+// export function getRandomCountry(): string {
+// 	const randomIndex = Math.floor(Math.random() * countries.length);
+// 	return countries[randomIndex];
+// }

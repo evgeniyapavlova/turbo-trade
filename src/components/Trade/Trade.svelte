@@ -32,7 +32,7 @@
 				nextEl: '.swiper-trade-button-next',
 				prevEl: '.swiper-trade-payments-button-prev'
 			},
-			autoplay: true,
+			autoplay: true
 		});
 	});
 </script>
@@ -60,30 +60,32 @@
 	}
 
 	.trade {
-		.content {
-			mask-image: linear-gradient(
-				270deg,
-				rgba(115, 115, 115, 0) 0%,
-				#7b7b7b 24.46%,
-				#cccccc 74.55%,
-				rgba(217, 217, 217, 0) 100%
-			);
-			mask-mode: alpha;
-			mask-repeat: no-repeat;
-			mask-size: 100% 100%;
-			mask-position: center;
+		.swiper-trade {
+			@media screen and (min-width: 801px) {
+				mask-image: linear-gradient(
+					270deg,
+					rgba(115, 115, 115, 0) 0%,
+					#7b7b7b 18%,
+					#cccccc 82%,
+					rgba(217, 217, 217, 0) 100%
+				);
+				mask-mode: alpha;
+				mask-repeat: no-repeat;
+				mask-size: 100% 100%;
+				mask-position: center;
 
-			-webkit-mask-image: linear-gradient(
-				270deg,
-				rgba(115, 115, 115, 0) 0%,
-				#7b7b7b 24.46%,
-				#cccccc 74.55%,
-				rgba(217, 217, 217, 0) 100%
-			);
-			-webkit-mask-mode: alpha;
-			-webkit-mask-repeat: no-repeat;
-			-webkit-mask-size: 100% 100%;
-			-webkit-mask-position: center;
+				-webkit-mask-image: linear-gradient(
+					270deg,
+					rgba(115, 115, 115, 0) 0%,
+					#7b7b7b 18%,
+					#cccccc 82%,
+					rgba(217, 217, 217, 0) 100%
+				);
+				-webkit-mask-mode: alpha;
+				-webkit-mask-repeat: no-repeat;
+				-webkit-mask-size: 100% 100%;
+				-webkit-mask-position: center;
+			}
 		}
 	}
 </style>

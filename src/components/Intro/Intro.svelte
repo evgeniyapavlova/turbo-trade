@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Image from '$common/Image.svelte';
+	import { reg } from '$lib/stores/links';
 
 	export let content;
 	const { intro, counter, tradeNow } = content;
@@ -12,7 +13,7 @@
 			<h1>{@html intro.h1}</h1>
 			<h2>{intro.h2}</h2>
 			<div class="text">{intro.caption}</div>
-			<a href="" class="button-secondary button-size-l">{tradeNow}</a>
+			<a href={$reg} class="button-secondary button-size-l">{tradeNow}</a>
 		</div>
 
 		<div class="intro-right">
@@ -28,6 +29,8 @@
 		display: flex;
 		align-items: flex-start;
 		justify-content: space-between;
+		color: var(--black);
+		position: relative;
 
 		@media screen and (max-width: 990px) {
 			display: block;
@@ -102,6 +105,7 @@
 		transform: translateX(-50%);
 		top: -32%;
 		width: 444px;
+		z-index: 0;
 
 		@media screen and (max-width: 1200px) {
 			width: 300px;

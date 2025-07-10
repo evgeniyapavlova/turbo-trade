@@ -1,5 +1,6 @@
 <script>
 	import { getRandomNames, names, getRandomProfit } from './tableData';
+	import { reg } from '$lib/stores/links';
 
 	export let asset, tradeNow, content;
 
@@ -34,7 +35,7 @@
 			.replace('{{amountMoney}}', getRandomProfit(100000, 500000))
 			.replace('{{asset}}', asset.name)}
 	</p>
-	<a class="button-primary button-size-l" href="#">
+	<a class="button-primary button-size-l" href={$reg}>
 		{tradeNow}
 	</a>
 </div>

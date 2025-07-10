@@ -1,11 +1,12 @@
 <script>
 	import Image from '$common/Image.svelte';
+	import { reg } from '$lib/stores/links';
 
 	export let content, tradeNow;
 	const { list } = content;
 </script>
 
-<section class="steps">
+<section class="steps" id="how-to-start">
 	<div class="content">
 		<h2>
 			{@html content.title}
@@ -27,7 +28,7 @@
 		</div>
 
 		<div class="btn-wrap">
-			<a class="button-primary button-size-l" href="#">
+			<a class="button-primary button-size-l" href="{$reg}">
 				{tradeNow}
 			</a>
 		</div>
@@ -57,11 +58,6 @@
 
 	.steps {
 		text-align: center;
-		padding: 153px 0;
-
-		@media screen and (max-width: 1100px) {
-			padding: 80px 0;
-		}
 
 		&-item {
 			display: flex;

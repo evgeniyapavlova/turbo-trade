@@ -66,3 +66,41 @@ ul {
 		padding-bottom: 24px;
 	}
 }
+
+.app {
+	overflow: hidden;
+}
+
+.crush {
+	margin-top: 350px;
+}
+.features,
+.steps,
+.trade,
+.reviews {
+	margin-bottom: 250px;
+}
+.protection {
+	margin-bottom: 130px;
+}
+
+@media screen and (max-width: 1200px) {
+	.crush {
+		margin-top: 100px;
+	}
+	.features,
+	.steps,
+	.trade,
+	.reviews {
+		margin-bottom: 200px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.features,
+	.steps,
+	.trade,
+	.reviews {
+		margin-bottom: 160px;
+	}
+}

@@ -4,7 +4,7 @@
 	export let content;
 </script>
 
-<section class="crush">
+<section class="crush" id="about">
 	<div class="content">
 		<div class="crush-left">
 			<h2 class="title-2">
@@ -29,9 +29,9 @@
 		color: #fff;
 		font-size: 28px;
 
-        @media screen and (max-width: 800px) {
-            font-size: 16px;
-        }
+		@media screen and (max-width: 800px) {
+			font-size: 16px;
+		}
 	}
 	.content {
 		display: flex;
@@ -40,7 +40,7 @@
 
 		@media screen and (max-width: 800px) {
 			display: block;
-            text-align: center;
+			text-align: center;
 		}
 	}
 	.crush {
@@ -52,25 +52,26 @@
 	}
 
 	:global(.crush-img-mobile) {
-        display: block;
-            margin-top: 24px;
+		display: block;
+		margin-top: 24px;
+		margin-bottom: 32px;
 
-        @media screen and (min-width: 600px) {
-            display: none;
-        }
-    }
+		@media screen and (min-width: 600px) {
+			display: none;
+		}
+	}
 
 	:global(.crush-img) {
 		margin-left: -380px;
-        display: none;
+		display: none;
 
 		@media screen and (max-width: 1200px) {
 			margin-left: -280px;
 		}
 
-        @media screen and (min-width: 600px) {
-            display: block;
-        }
+		@media screen and (min-width: 600px) {
+			display: block;
+		}
 	}
 
 	:global(.crush-img img) {

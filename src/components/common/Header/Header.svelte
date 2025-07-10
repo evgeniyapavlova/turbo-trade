@@ -2,29 +2,47 @@
 	import Logo from './components/Logo.svelte';
 	import LoginIcon from './components/LoginIcon.svelte';
 	import LangSwitcher from './components/LangSwitcher.svelte';
+	import { reg, login } from '$lib/stores/links';
 	export let content, tradeNow: string;
 
 	let isExpanded = false;
+
+	export function scrollToSection(e: Event) {
+		const id = (e?.currentTarget as HTMLElement)?.dataset?.targetId;
+		if (!id) return;
+
+		const el = document.getElementById(id);
+		if (el) {
+			const top = el.getBoundingClientRect().top + window.pageYOffset - 50;
+			window.scrollTo({ top, behavior: 'smooth' });
+		}
+	}
 </script>
 
 <header>
-	<div class="content">
+	<div class="content" style="overflow: visible;">
 		<Logo />
 
 		<div class="header-menu header-menu-sections">
-			<a href="#" class="header-link header-link-highlight">{tradeNow}</a>
-			<a href="#" class="header-link">{content.about}</a>
-			<a href="#" class="header-link">{content.howToStart}</a>
-			<a href="#" class="header-link">{content.reviews}</a>
+			<a href={$reg} class="header-link header-link-highlight">{tradeNow}</a>
+			<button on:click={scrollToSection} class="header-link" data-target-id="about">
+				{content.about}
+			</button>
+			<button class="header-link" on:click={scrollToSection} data-target-id="how-to-start">
+				{content.howToStart}
+			</button>
+			<button class="header-link" on:click={scrollToSection} data-target-id="reviews">
+				{content.reviews}
+			</button>
 		</div>
 
 		<div class="header-menu header-menu-actions">
 			<LangSwitcher />
-			<a href="#" class="button-tertiary button-size-m button-with-icon">
+			<a href={$login} class="button-tertiary button-size-m button-with-icon">
 				<LoginIcon />
 				{content.logIn}
 			</a>
-			<a class="button-secondary button-size-m" href="#">{tradeNow}</a>
+			<a class="button-secondary button-size-m" href={$reg}>{tradeNow}</a>
 		</div>
 
 		<button
@@ -43,10 +61,12 @@
 
 	header {
 		padding: 38px 0;
+		position: relative;
+		z-index: 1;
 
 		@media screen and (max-width: var.$tab) {
 			padding: 12px 0;
-			background: rgba(0, 0, 0, 0.10);
+			background: rgba(0, 0, 0, 0.1);
 		}
 	}
 
@@ -132,12 +152,37 @@
 			}
 		}
 		&-link {
-			color: var(--black);
+			color: rgba(0, 0, 0, 0.3);
 			font-family: var(--secondary-font);
 			font-size: 18px;
 			font-weight: 400;
+			transition: color 0.2s ease-in-out;
+			position: relative;
+
+			&::after {
+				content: '';
+				position: absolute;
+				left: 50%;
+				bottom: -4px;
+				width: 0;
+				height: 1px;
+				background-color: currentColor;
+				transition:
+					width 0.3s ease,
+					left 0.3s ease;
+			}
+
+			&:hover {
+				color: var(--black);
+
+				&::after {
+					width: 100%;
+					left: 0;
+				}
+			}
 
 			&-highlight {
+				color: var(--black);
 				font-weight: 700;
 			}
 		}

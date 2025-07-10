@@ -46,7 +46,7 @@
 	{#if isExpanded}
 		<menu id="lang-switch-menu" class="lang-switch-menu" transition:fade>
 			{#each LOCALES_MAP as locale}
-				<a class="" href="{base}/{locale.shortname}">
+				<a class="#" href="{base}/{locale.shortname}">
 					{locale.title}
 				</a>
 			{/each}
@@ -89,7 +89,7 @@
 				transition: background-color 0.2s ease-in-out;
 				display: block;
 				border-radius: 10px;
-                font-size: 16px;
+				font-size: 16px;
 
 				&:hover {
 					background-color: rgba(255, 255, 255, 0.1);
@@ -103,6 +103,7 @@
 		align-items: center;
 		justify-content: center;
 		gap: 8px;
+		color: var(--black);
 
 		img {
 			width: 18px;
