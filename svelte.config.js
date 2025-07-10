@@ -4,7 +4,7 @@ import path from 'path';
 
 // export const locales = ['ar', 'en', 'es', 'pt', 'ru', 'th'];
 export const locales = ['en'];
-const entries = locales.map((locale) => `/${locale}/index`);
+const entries = locales.map((locale) => `/${locale}`);
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -13,10 +13,10 @@ const config = {
 		adapter: adapter(),
 		paths: {
 			base: process.env.NODE_ENV === 'production' ? '/turbo-trade' : ''
+		},
+		prerender: {
+			entries: [...entries, '/']
 		}
-	},
-	prerender: {
-		entries: [...entries, '/']
 	},
 	alias: {
 		$lib: path.resolve('src/lib'),
