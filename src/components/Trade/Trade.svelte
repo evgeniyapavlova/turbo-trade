@@ -39,7 +39,7 @@
 
 <section class="trade">
 	<div class="content">
-		<h2>{content.title}</h2>
+		<h2 class="title-2-main"><span>{content.title}</span></h2>
 		<div class="swiper-trade">
 			<div class="swiper-wrapper">
 				{#each assets as asset}
@@ -52,10 +52,6 @@
 
 <style lang="scss">
 	h2 {
-		color: var(--Green-Turbo);
-		text-align: center;
-		font-size: 48px;
-		font-weight: 700;
 		margin-bottom: 60px;
 	}
 
