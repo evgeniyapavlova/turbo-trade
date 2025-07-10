@@ -91,9 +91,6 @@
 
 			@media screen and (max-width: 800px) {
 				gap: 8px 16px;
-				display: grid;
-				grid-template-columns: 25% 75%;
-				grid-template-rows: auto auto;
 				align-items: start;
 				padding: 24px 16px;
 				text-align: start;
@@ -113,11 +110,11 @@
 				margin-bottom: -54px;
 
 				@media screen and (max-width: 800px) {
-					grid-row: 1 / span 2;
-					grid-column: 1;
-					width: 100%;
+					width: 25%;
 					margin: 0;
-					position: relative;
+					position: absolute;
+					left: 16px;
+					top: 0;
 					height: 100%;
 
 					img {
@@ -135,19 +132,17 @@
 				font-weight: 700;
 
 				@media screen and (max-width: 800px) {
-					grid-row: 1;
-					grid-column: 2;
 					font-size: 21px;
+					padding-left: calc(25% + 16px);
 				}
 			}
 
 			&-caption {
 				@media screen and (max-width: 800px) {
-					grid-row: 2;
-					grid-column: 2;
 					font-size: 14px;
 					color: rgba(255, 255, 255, 0.7);
 					padding-inline-end: 16px;
+					padding-left: calc(25% + 16px);
 				}
 			}
 		}
