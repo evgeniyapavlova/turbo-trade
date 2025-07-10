@@ -42,7 +42,6 @@ ul {
 	max-width: 1448px;
 	padding: 0 24px;
 	margin: 0 auto;
-	overflow: hidden;
 
 	@media screen and (max-width: 600px) {
 		padding: 0 20px;
@@ -93,6 +92,12 @@ ul {
 	.trade,
 	.reviews {
 		margin-bottom: 200px;
+	}
+}
+
+@media screen and (max-width: 990px) {
+	.crush {
+		margin-top: 0;
 	}
 }
 

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Image from '$common/Image.svelte';
+	import Counter from './components/Counter.svelte';
 	import { reg } from '$lib/stores/links';
 
 	export let content;
@@ -7,7 +8,7 @@
 </script>
 
 <section class="intro">
-	<Image path="intro/rocket" classes="intro-rocket" />
+	<Image path="intro/rocket" classes="intro-rocket" isLazy={false} />
 	<div class="content">
 		<div class="intro-left">
 			<h1>{@html intro.h1}</h1>
@@ -17,7 +18,7 @@
 		</div>
 
 		<div class="intro-right">
-			<div class="counter"></div>
+			<Counter content={counter} />
 		</div>
 	</div>
 </section>
@@ -91,12 +92,6 @@
 		@media screen and (max-width: 600px) {
 			font-size: 14px;
 		}
-	}
-	.counter {
-		border-radius: 20px;
-		background: #fff;
-		box-shadow: 12px 19px 0px 0px rgba(0, 0, 0, 0.05);
-		height: 400px;
 	}
 
 	:global(.intro-rocket) {

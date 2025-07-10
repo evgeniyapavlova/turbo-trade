@@ -68,7 +68,7 @@
 						</p>
 					</div>
 				{/each}
-				<a href="#" class="button-primary button-size-l button-desktop">
+				<a href={$reg} class="button-primary button-size-l button-desktop">
 					{tradeNow}
 				</a>
 			</div>

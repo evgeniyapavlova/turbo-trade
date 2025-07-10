@@ -9,6 +9,7 @@
 	import Reviews from '$comps/Reviews';
 	import Protection from '$comps/Protection';
 	import Footer from '$common/Footer.svelte';
+	import Counter from '$comps/Intro/components/Counter.svelte';
 
 	import { locale } from '$lib/stores/locale.js';
 	import { reg, login, searchString } from '$lib/stores/links';
@@ -38,6 +39,10 @@
 		/>
 	</div>
 
+	<div class="content counter-mobile">
+		<Counter content={translations.counter} />
+	</div>
+
 	<Crush content={translations.crush} />
 	<Features content={translations.features} />
 	<Steps content={translations.steps} tradeNow={translations.buttons.tradeNow} />
@@ -46,3 +51,14 @@
 	<Protection content={translations.protection} tradeNow={translations.buttons.tradeNow} />
 	<Footer content={translations.footer} />
 </div>
+
+<style lang="scss">
+	.counter-mobile {
+		display: none;
+
+		@media screen and (max-width: 990px) {
+			display: flex;
+			position: relative;
+		}
+	}
+</style>

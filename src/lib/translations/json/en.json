@@ -17,9 +17,11 @@
         "title": "If I had invested",
         "periods": {
             "m1": "1 month ago",
-            "m2": "1 months ago",
+            "m2": "2 months ago",
             "y1": "1 year ago"
         },
+        "in": "In",
+        "just": "Just",
         "result": "I would now have"
     },
     "crush": {
