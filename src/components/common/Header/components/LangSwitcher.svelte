@@ -31,20 +31,19 @@
 	});
 </script>
 
-<div class="lang-switch-wrap" id="lang-switch-wrap">
+<div class="lang-switch-wrap dropdown-wrap" id="lang-switch-wrap" class:is-expanded={isExpanded}>
 	<button
 		class="button-locale"
 		on:click={() => (isExpanded = !isExpanded)}
-		class:is-expanded={isExpanded}
 		aria-label="Open languages menu"
 	>
 		<img src="{base}/images/locales/{currentLocaleObj?.shortname}.svg" alt="" />
-		{currentLocaleObj?.title}
+		<span>{currentLocaleObj?.title}</span>
 		<Arrow />
 	</button>
 
 	{#if isExpanded}
-		<menu id="lang-switch-menu" class="lang-switch-menu" transition:fade>
+		<menu id="lang-switch-menu" class="lang-switch-menu dropdown-menu" transition:fade>
 			{#each LOCALES_MAP as locale}
 				<a class="#" href="{base}/{locale.shortname}">
 					{locale.title}
@@ -55,48 +54,7 @@
 </div>
 
 <style lang="scss">
-	.lang-switch {
-		&-wrap {
-			position: relative;
-		}
-
-		&-menu {
-			position: absolute;
-			background-color: var(--bgr);
-			border-radius: 10px;
-			color: var(--main-font-color);
-			text-align: start;
-			padding: 8px 12px;
-			top: 38px;
-			left: 0;
-			box-shadow: 12px 19px 0px 0px rgba(0, 0, 0, 0.05);
-			z-index: 2;
-
-			&::before {
-				content: '';
-				position: absolute;
-				top: -6px;
-				left: calc(50% - 6px);
-				width: 0;
-				height: 0;
-				border-left: 6px solid transparent;
-				border-right: 6px solid transparent;
-				border-bottom: 6px solid var(--bgr);
-			}
-
-			a {
-				padding: 10px 16px;
-				transition: background-color 0.2s ease-in-out;
-				display: block;
-				border-radius: 10px;
-				font-size: 16px;
-
-				&:hover {
-					background-color: rgba(255, 255, 255, 0.1);
-				}
-			}
-		}
-	}
+	@use '$lib/styles/_constants.scss' as var;
 
 	.button-locale {
 		display: flex;
@@ -113,7 +71,11 @@
 		}
 	}
 
-	:global(.button-locale.is-expanded svg) {
-		transform: rotate(180deg);
+	@media screen and (max-width: var.$tab) {
+		.button-locale {
+			span {
+				display: none;
+			}
+		}
 	}
 </style>
