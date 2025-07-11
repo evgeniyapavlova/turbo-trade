@@ -35,10 +35,9 @@
 		$isRedirecting = true;
 		const newLocale = (e?.target as HTMLElement).dataset.locale;
 		const url = document.location.pathname;
-		const newUrl = url.replace(
-			new RegExp('/' + $locale + '/|/' + $locale + '$|/?$'),
-			'/' + newLocale + '/'
-		);
+
+		const newUrl = url.replace(new RegExp(`\\b${$locale}\\b`), newLocale!);
+
 		document.location = newUrl + document.location.search;
 	};
 </script>
