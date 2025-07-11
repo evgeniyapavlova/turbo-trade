@@ -4,6 +4,7 @@
 	import { locale } from '$lib/stores/locale.js';
 	import { fade } from 'svelte/transition';
 	import { base } from '$app/paths';
+	import { isRedirecting } from '$lib/stores/isRedirecting';
 	import Arrow from './Arrow.svelte';
 
 	let isExpanded = false;
@@ -29,6 +30,17 @@
 			document.body.removeEventListener('click', handleClick);
 		};
 	});
+
+	const redirect = (e: MouseEvent) => {
+		$isRedirecting = true;
+		const newLocale = (e?.target as HTMLElement).dataset.locale;
+		const url = document.location.pathname;
+		const newUrl = url.replace(
+			new RegExp('/' + $locale + '/|/' + $locale + '$|/?$'),
+			'/' + newLocale + '/'
+		);
+		document.location = newUrl + document.location.search;
+	};
 </script>
 
 <div class="lang-switch-wrap dropdown-wrap" id="lang-switch-wrap" class:is-expanded={isExpanded}>
@@ -45,9 +57,9 @@
 	{#if isExpanded}
 		<menu id="lang-switch-menu" class="lang-switch-menu dropdown-menu" transition:fade>
 			{#each LOCALES_MAP as locale}
-				<a href="{base}/{locale.shortname}">
+				<button data-locale={locale.shortname} on:click={redirect}>
 					{locale.title}
-				</a>
+				</button>
 			{/each}
 		</menu>
 	{/if}

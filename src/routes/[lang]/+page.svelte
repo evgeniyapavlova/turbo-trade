@@ -10,6 +10,9 @@
 	import Protection from '$comps/Protection';
 	import Footer from '$common/Footer.svelte';
 	import Counter from '$comps/Intro/components/Counter.svelte';
+	import LoaderHorizontal from '$common/LoaderHorizontal.svelte';
+
+	import { isRedirecting } from '$lib/stores/isRedirecting';
 
 	import { locale } from '$lib/stores/locale.js';
 	import { reg, login, searchString } from '$lib/stores/links';
@@ -26,6 +29,8 @@
 		$login = $login + $searchString;
 	});
 </script>
+
+{#if $isRedirecting}<LoaderHorizontal />{/if}
 
 <div class="app">
 	<div class="gradient-wrap">
