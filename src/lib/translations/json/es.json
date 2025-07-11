@@ -1,0 +1,132 @@
+{
+    "buttons": {
+        "tradeNow": "Opera ahora"
+    },
+    "header": {
+        "about": "Sobre nosotros",
+        "how-to-start": "Cómo empezar",
+        "reviews": "Reseñas",
+        "logIn": "Iniciar sesión"
+    },
+    "intro": {
+        "h1": "APROVECHA EL<span>APALANCAMIENTO</span>",
+        "h2": "Tu puerta de entrada a ganancias explosivas en criptomonedas",
+        "caption": "Convierte tus $100 en $10.000 con nuestro apalancamiento líder en la industria. ¡Comienza a dominar el mercado HOY!"
+    },
+    "counter": {
+        "title": "Si hubiera invertido",
+        "periods": {
+            "m1": "hace 1 mes",
+            "m2": "hace 2 meses",
+            "y1": "hace 1 año"
+        },
+        "in": "en",
+        "just": "tan solo",
+        "result": "ahora tendría"
+    },
+    "crush": {
+        "title": "APLASTA A LA COMPETENCIA",
+        "caption": "¡Turbo.Trade ofrece un apalancamiento 15 veces más poderoso que las plataformas estándar!"
+    },
+    "features": {
+        "list": [
+            {
+                "title": "Interfaz ligera",
+                "caption": "Elige dirección, define monto y apalancamiento. Así de fácil."
+            },
+            {
+                "title": "Señales simples",
+                "caption": "Deja que la IA te ayude a tomar mejores decisiones de trading"
+            },
+            {
+                "title": "Margen aislado",
+                "caption": "Limita tu riesgo al monto de la operación: tu saldo total permanece seguro"
+            },
+            {
+                "title": "Más rápido que el resto",
+                "caption": "Sin funciones innecesarias, solo lo que necesitas"
+            }
+        ],
+        "devices": {
+            "title": "Disponible en cualquier dispositivo",
+            "caption": "Opera en cualquier lugar: desde la web, la computadora de escritorio o el móvil",
+            "instantAccess": "Acceso instantáneo",
+            "emailOnly": "Solo correo electrónico, sin KYC"
+        }
+    },
+    "steps": {
+        "title": "¿ESTÁS PREPARADO PARA GANAR DINERO EN 60 SEGUNDOS O MENOS?<span>¡En solo 3 sencillos pasos!</span>",
+        "list": [
+            {
+                "title": "Regístrate rápidamente",
+                "caption": "Solo correo electrónico, sin KYC"
+            },
+            {
+                "title": "Financia tu cuenta",
+                "caption": "Comienza a operar con solo $1"
+            },
+            {
+                "title": "Opera y gana",
+                "caption": "Empieza con poco y gana en grande"
+            }
+        ]
+    },
+    "trade": {
+        "title": "Opera con los futuros de criptomonedas más populares",
+        "top3": "Los 3 mejores traders",
+        "caption": "Hoy, {{amountTraders}} traders ganaron ${{amountMoney}} operando con {{asset}}."
+    },
+    "reviews": {
+        "title": "Los traders que actúan con rapidez ganan en grande<span>Únete a más de 36.000 traders exitosos</span>",
+        "profit": "de ganancia",
+        "traders": "comerciantes",
+        "tradingVolume": "volumen de negociación",
+        "countries": "países",
+        "list": [
+            "$50 me proporcionaron el capital. ¿El resto? Pura ambición. Esta plataforma cumple.",
+            "Dijeron \"demasiado bueno para ser verdad\" y yo dije \"mírame\". Ahora he ganado 5k.",
+            "¿Quién necesita suerte cuando la plataforma hace la mitad del trabajo? Dinero. Obtenido. Rápidamente.",
+            "Por fin, una plataforma sencilla, rápida y que realmente paga.",
+            "La mejor decisión que he tomado este año. ¡Capital real, retornos reales!",
+            "No esperaba que funcionara tan bien: ¡cada operación parece una decisión inteligente!"
+        ]
+    },
+    "protection": {
+        "title": "PROTECCIÓN DE GRADO MILITAR<span>Opera agresivamente con tranquilidad</span>",
+        "caption": "Concéntrate en ganar dinero mientras nuestros sistemas de seguridad avanzados protegen tus ganancias y datos",
+        "list": [
+            {
+                "title": "Cuenta<br />demo",
+                "caption": "Explora la plataforma sin riesgos y sin usar fondos reales"
+            },
+            {
+                "title": "Estrategias para<br />aumentar las ganancias",
+                "caption": "Nuestras estrategias integradas han ayudado a los traders a aumentar sus retornos hasta 10 veces"
+            },
+            {
+                "title": "Seguridad <br />a nivel bancario",
+                "caption": "Tus datos y ganancias están protegidos por el mismo cifrado utilizado por las principales instituciones financieras"
+            },
+            {
+                "title": "2FA ultra<br />segura",
+                "caption": "Una capa adicional de seguridad garantiza que solo TÚ puedas acceder a tus crecientes ganancias"
+            }
+        ]
+    },
+    "footer": {
+        "rw": "Operar con futuros con alto apalancamiento implica un riesgo significativo y puede resultar en la pérdida de todo el capital invertido. Opera únicamente con fondos que puedas permitirte perder.",
+        "links": [
+            "AML",
+            "Comisiones Generales",
+            "Política de Ejecución de Órdenes",
+            "Política de Pagos",
+            "Política de Privacidad",
+            "Página de Términos",
+            "Cookies",
+            "Cuentas demo",
+            "Descargo de riesgos",
+            "Política de retiradas"
+        ],
+        "copyright": "Reservados todos los derechos."
+    }
+}

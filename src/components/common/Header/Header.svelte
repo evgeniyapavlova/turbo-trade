@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
 	import Logo from './components/Logo.svelte';
 	import LoginIcon from './components/LoginIcon.svelte';
 	import LangSwitcher from './components/LangSwitcher.svelte';
@@ -13,10 +15,33 @@
 
 		const el = document.getElementById(id);
 		if (el) {
+			isExpanded = false;
 			const top = el.getBoundingClientRect().top + window.pageYOffset - 50;
 			window.scrollTo({ top, behavior: 'smooth' });
 		}
 	}
+
+	const menuLinks = ['about', 'how-to-start', 'reviews'];
+
+	onMount(() => {
+		function handleClick(event: Event) {
+			const targetElement = event.target;
+			if (!(targetElement instanceof Node)) return;
+
+			const wrapElement = document.getElementById('actions-wrap');
+			const menuElement = document.getElementById('actions-menu');
+
+			if (!wrapElement?.contains(targetElement) && !menuElement?.contains(targetElement)) {
+				isExpanded = false;
+			}
+		}
+
+		document.body.addEventListener('click', handleClick);
+
+		return () => {
+			document.body.removeEventListener('click', handleClick);
+		};
+	});
 </script>
 
 <header>
@@ -25,39 +50,56 @@
 
 		<div class="header-menu header-menu-sections">
 			<a href={$reg} class="header-link header-link-highlight">{tradeNow}</a>
-			<button on:click={scrollToSection} class="header-link" data-target-id="about">
-				{content.about}
-			</button>
-			<button class="header-link" on:click={scrollToSection} data-target-id="how-to-start">
-				{content.howToStart}
-			</button>
-			<button class="header-link" on:click={scrollToSection} data-target-id="reviews">
-				{content.reviews}
-			</button>
+			{#each menuLinks as link}
+				<button on:click={scrollToSection} class="header-link" data-target-id={link}>
+					{content[link]}
+				</button>
+			{/each}
 		</div>
 
 		<div class="header-menu header-menu-actions">
 			<LangSwitcher />
 			<a href={$login} class="button-tertiary button-size-m button-with-icon">
 				<LoginIcon />
-				{content.logIn}
+				<span>{content.logIn}</span>
 			</a>
 			<a class="button-secondary button-size-m" href={$reg}>{tradeNow}</a>
 		</div>
 
-		<button
-			class="header-menu-burger"
-			on:click={() => (isExpanded = !isExpanded)}
-			class:is-expanded={isExpanded}
-			aria-label="Open mobile menu"
-		>
-			<div class="header-menu-burger-icon"></div>
-		</button>
+		<div class="dropdown-wrap" id="actions-wrap">
+			<button
+				class="header-menu-burger"
+				on:click={() => (isExpanded = !isExpanded)}
+				class:is-expanded={isExpanded}
+				aria-label="Open mobile menu"
+			>
+				<div class="header-menu-burger-icon"></div>
+			</button>
+
+			{#if isExpanded}
+				<menu class="dropdown-menu" transition:fade id="actions-menu">
+					<a href={$reg} style="font-weight: 700;">{tradeNow}</a>
+					{#each menuLinks as link}
+						<button on:click={scrollToSection} data-target-id={link}>
+							{content[link]}
+						</button>
+					{/each}
+				</menu>
+			{/if}
+		</div>
 	</div>
 </header>
 
 <style lang="scss">
 	@use '$lib/styles/_constants.scss' as var;
+
+	.dropdown-wrap {
+		display: block;
+
+		@media screen and (min-width: (var.$tab + 1px)) {
+			display: none;
+		}
+	}
 
 	header {
 		padding: 38px 0;
@@ -148,7 +190,9 @@
 			}
 
 			@media screen and (max-width: var.$tab) {
-				display: none;
+				&-sections {
+					display: none;
+				}
 			}
 		}
 		&-link {
@@ -185,6 +229,31 @@
 				color: var(--black);
 				font-weight: 700;
 			}
+		}
+	}
+
+	@media screen and (max-width: var.$tab) {
+		.button-secondary {
+			display: none;
+		}
+
+		.header-menu-actions {
+			flex-grow: 1;
+			flex-direction: row-reverse;
+		}
+
+		.button-with-icon {
+			border-radius: 10px;
+			background: rgba(0, 0, 0, 0.1);
+			padding: 8px;
+
+			span {
+				display: none;
+			}
+		}
+
+		.content {
+			gap: 16px;
 		}
 	}
 </style>

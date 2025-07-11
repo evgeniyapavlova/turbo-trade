@@ -1,7 +1,6 @@
 import type { LocaleType, LocaleFullType } from '$lib/types/locales';
 
-// export const locales: LocaleType[] = ['ar', 'en', 'es', 'pt', 'ru', 'th'];
-export const locales: LocaleType[] = ['en'];
+export const locales: LocaleType[] = ['ar', 'en', 'es', 'pt', 'ru', 'th'];
 
 export const LOCALES_MAP: LocaleFullType[] = [
 	{ name: 'ar_KW', title: 'العربية', shortname: 'ar' },

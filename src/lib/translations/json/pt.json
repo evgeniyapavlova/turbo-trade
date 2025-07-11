@@ -1,0 +1,132 @@
+{
+    "buttons": {
+        "tradeNow": "Negocie agora"
+    },
+    "header": {
+        "about": "Quem somos",
+        "how-to-start": "Como começar",
+        "reviews": "Avaliações",
+        "logIn": "Entrar"
+    },
+    "intro": {
+        "h1": "APROVEITE A<span>ALAVANCAGEM<span>",
+        "h2": "Seu portal para lucros explosivos com criptomoedas",
+        "caption": "Transforme seus $ 100 em $ 10.000 com nossa alavancagem líder do setor. Comece a dominar o mercado HOJE!"
+    },
+    "counter": {
+        "title": "Se eu tivesse investido",
+        "periods": {
+            "m1": "1 mês",
+            "m2": "2 meses",
+            "y1": "1 ano"
+        },
+        "in": "em",
+        "just": "há apenas",
+        "result": "eu teria agora"
+    },
+    "crush": {
+        "title": "ESMAGUE A CONCORRÊNCIA",
+        "caption": "A Turbo.Trade oferece uma alavancagem 15x mais poderosa do que as plataformas padrão!"
+    },
+    "features": {
+        "list": [
+            {
+                "title": "Interface leve",
+                "caption": "Basta escolher uma direção, definir o valor do seu investimento e alavancagem."
+            },
+            {
+                "title": "Sinais simples",
+                "caption": "Deixe a IA ajudá-lo a tomar melhores decisões de negociação"
+            },
+            {
+                "title": "Margem isolada",
+                "caption": "Limite seu risco ao valor da negociação: seu saldo total permanece seguro"
+            },
+            {
+                "title": "Mais rápida que o resto",
+                "caption": "Sem recursos desnecessários, apenas o que você precisa"
+            }
+        ],
+        "devices": {
+            "title": "Disponível em qualquer dispositivo",
+            "caption": "Negocie em qualquer lugar, na web, no desktop ou no seu dispositivo móvel",
+            "instantAccess": "Acceso instantáneo",
+            "emailOnly": "Somente e-mail, sem KYC"
+        }
+    },
+    "steps": {
+        "title": "PRONTO PARA GANHAR DINHEIRO EM 60 SEGUNDOS OU MENOS?<span>Apenas 3 etapas simples!</span>",
+        "list": [
+            {
+                "title": "Registre-se rapidamente",
+                "caption": "Somente e-mail, sem KYC"
+            },
+            {
+                "title": "Financie sua conta",
+                "caption": "Comece a negociar com apenas $ 1"
+            },
+            {
+                "title": "Negocie e ganhe",
+                "caption": "Comece com pouco, ganhe muito"
+            }
+        ]
+    },
+    "trade": {
+        "title": "Negocie os Futuros de Criptomoedas mais populares",
+        "top3": "Os 3 principais traders",
+        "caption": "Hoje, {{amountTraders}} traders ganharam ${{amountMoney}} negociando {{asset}}."
+    },
+    "reviews": {
+        "title": "Traders que agem rápido ganham muito<span>Seja uma das 36.000 histórias de sucesso</span>",
+        "profit": "Lucro de",
+        "traders": "comerciantes",
+        "tradingVolume": "volume de negociação",
+        "countries": "países",
+        "list": [
+            "$ 50 me trouxeram dinheiro. O resto? Puro trabalho. Esta plataforma cumpre o que promete.",
+            "Eles disseram \"bom demais para ser verdade\": eu disse \"apenas observe\". Agora tenho 5K.",
+            "Quem precisa de sorte quando a plataforma faz metade do trabalho? Dinheiro. Entrando. Rápido.",
+            "Finalmente, uma plataforma simples, rápida e que realmente paga.",
+            "Melhor decisão que tomei neste ano. Capital real, retornos reais!",
+            "Não esperava que funcionasse tão bem: cada negociação parece uma jogada inteligente!"
+        ]
+    },
+    "protection": {
+        "title": "PROTEÇÃO DE NÍVEL MILITAR<span>Negocie agressivamente com tranquilidade</span>",
+        "caption": "Concentre-se em ganhar dinheiro enquanto nossos sistemas de segurança avançados protegem seus lucros e dados",
+        "list": [
+            {
+                "title": "Conta de<br />demonstração",
+                "caption": "Explore a plataforma sem riscos e sem usar fundos reais"
+            },
+            {
+                "title": "Estratégias para<br />aumentar os lucros",
+                "caption": "Nossas estratégias integradas ajudaram os traders a aumentar os retornos em até 10 vezes"
+            },
+            {
+                "title": "Segurança de<br />nível bancário",
+                "caption": "Seus dados e lucros são protegidos pela mesma criptografia usada pelas principais instituições financeiras"
+            },
+            {
+                "title": "Conta 2FA<br />ultrassegura",
+                "caption": "Uma camada extra de segurança garante que somente VOCÊ possa acessar seus lucros crescentes"
+            }
+        ]
+    },
+    "footer": {
+        "rw": "Negociar futuros com alavancagem alta envolve riscos significativos e pode resultar na perda de todo o seu capital investido. Negocie somente com fundos que você pode perder.",
+        "links": [
+            "AML",
+            "Taxas Gerais",
+            "Execução de Pedidos",
+            "Políticas de pagamento",
+            "Política de Privacidade",
+            "Termos e Condições",
+            "Cookies",
+            "Contas de demonstração",
+            "Divulgação de Risco",
+            "Política de Retirada"
+        ],
+        "copyright": "Todos os direitos reservados."
+    }
+}
