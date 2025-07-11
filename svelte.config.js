@@ -3,7 +3,7 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import path from 'path';
 
 // export const locales = ['ar', 'en', 'es', 'pt', 'ru', 'th'];
-export const locales = ['en'];
+export const locales = ['en', 'ru'];
 const entries = locales.map((locale) => `/${locale}`);
 
 /** @type {import('@sveltejs/kit').Config} */

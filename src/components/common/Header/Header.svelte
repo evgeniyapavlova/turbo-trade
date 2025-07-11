@@ -93,6 +93,14 @@
 <style lang="scss">
 	@use '$lib/styles/_constants.scss' as var;
 
+	.dropdown-wrap {
+		display: block;
+
+		@media screen and (min-width: (var.$tab + 1px)) {
+			display: none;
+		}
+	}
+
 	header {
 		padding: 38px 0;
 		position: relative;
