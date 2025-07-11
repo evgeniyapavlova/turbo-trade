@@ -45,7 +45,7 @@
 	{#if isExpanded}
 		<menu id="lang-switch-menu" class="lang-switch-menu dropdown-menu" transition:fade>
 			{#each LOCALES_MAP as locale}
-				<a class="#" href="{base}/{locale.shortname}">
+				<a href="{base}/{locale.shortname}">
 					{locale.title}
 				</a>
 			{/each}

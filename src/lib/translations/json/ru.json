@@ -48,10 +48,10 @@
             }
         ],
         "devices": {
-            "title": "Available on any device",
-            "caption": "Trade anywhere — from web, desktop, or mobile",
-            "instantAccess": "Instant access",
-            "emailOnly": "Email only — no KYC"
+            "title": "Доступно на всех устройствах",
+            "caption": "Торгуй из приложения, с телефона или прямо в браузере",
+            "instantAccess": "Мгновенный доступ",
+            "emailOnly": "Только email – без KYC"
         }
     },
     "steps": {
