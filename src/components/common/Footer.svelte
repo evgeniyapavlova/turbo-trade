@@ -49,7 +49,7 @@
 			<ul class="footer-legal-links">
 				{#each legalLinks as item, idx}
 					<li>
-						<a href="https://turbo.trade.com/legal/{item}{$searchString}" target="_blank">
+						<a href="https://turbo.trade/legal/{item}{$searchString}" target="_blank">
 							{content.links[idx]}
 						</a>
 					</li>
